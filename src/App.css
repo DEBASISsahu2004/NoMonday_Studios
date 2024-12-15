@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: padding 0.5s ease-in-out;
+  background-color: #000;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 10px;
+  }
+}
+
+@font-face {
+  font-family: "Clash Display";
+  src: url("./assets/fonts/ClashDisplay/ClashDisplay_Complete/Fonts/OTF/ClashDisplay-Regular.otf")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Fontspring";
+  src: url("./assets/fonts/FONTSPRING-DEMO-Blunt-Con/Fontspring-DEMO-blunt-con.otf")
+    format("opentype");
+}

@@ -1,0 +1,152 @@
+:root {
+  --color-bg1: #090a23;
+  --color1: 0,0,255;
+  --circle-size: 80%;
+  --blending: hard-light;
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+@keyframes borderControl {
+  0%, 100% {
+    border-radius: 80% 40% 60% 20%;
+  }
+  25% {
+    border-radius: 60% 70% 30% 60%;
+  }
+  50% {
+    border-radius: 40% 90% 60% 20%;
+  }
+  75% {
+    border-radius: 60% 70% 30% 60%;
+  }
+}
+
+.gradientbg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg1);
+  z-index: -1;
+  transition: border-radius 0.5s ease-in-out;
+  border-radius: 18px;
+
+  svg {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 0;
+    height: 0;
+  }
+  
+  .gradientscontainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    filter: url(#goo) blur(40px);
+  }
+
+  .g1, .g2, .g3, .g4, .g5 {
+    position: absolute;
+    background: linear-gradient(45deg, rgba(var(--color1), 0.8), transparent);
+    mix-blend-mode: var(--blending);
+
+    width: var(--circle-size);
+    height: var(--circle-size);
+    top: calc(50% - var(--circle-size) / 2);
+    left: calc(50% - var(--circle-size) / 2);
+    transform-origin: center center;
+
+    animation: moveVertical 20s ease infinite, borderControl 7s ease infinite;
+    transition: all 6.6s ease-in-out;
+    border-radius: 80% 40% 60% 20%;
+    opacity: 1;
+  }
+
+  .g2 {
+    transform-origin: calc(50% + 400px);
+
+    animation: moveInCircle 20s ease infinite, borderControl 7s ease infinite;
+    transition: all 6.6s ease-in-out;
+    opacity: 0.8;
+  }
+
+  .g3 {
+
+    top: calc(50% - var(--circle-size) / 2 + 200px);
+    left: calc(50% - var(--circle-size) / 2 - 500px);
+    transform-origin: calc(50% + 400px);
+
+    animation: moveHorizontal 20s ease infinite, borderControl 7s ease infinite;
+    transition: all 6.6s ease-in-out;
+    opacity: 0.6;
+  }
+
+  .g4 {
+    transform-origin: calc(50% + 200px);
+
+    animation: moveInCircle 10s ease infinite, borderControl 7s ease infinite;
+    transition: all 3.3s ease-in-out;
+    opacity: 0.8;
+  }
+
+  .g5 {
+
+    width: calc(var(--circle-size) * 2);
+    height: calc(var(--circle-size) * 2);
+    top: calc(50% - var(--circle-size));
+    left: calc(50% - var(--circle-size));
+    transform-origin: calc(50% - 800px) calc(50% + 200px);
+
+    animation: moveInCircle 30s ease infinite, borderControl 7s ease infinite;
+    transition: all 10s ease-in-out;
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .gradientbg {
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: 375px) {
+  .gradientbg {
+    border-radius: 10px;
+  }
+}

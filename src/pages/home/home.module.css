@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.homeContainer {
+  position: relative;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 18px;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.homeContainer .logoContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 170px;
+  background: linear-gradient(
+    45deg,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #7274ff,
+    #ffffff,
+    #ffffff,
+    #ffffff
+  );
+  background-size: 400% 400%;
+  mask-image: url(../../assets/svgs/No-Monday-Logo-white.svg);
+  -webkit-mask-image: url(../../assets/svgs/No-Monday-Logo-white.svg);
+  mask-size: contain;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  animation: logoAnim 5s ease-in-out infinite;
+}
+
+.homeContainer .serviceButton {
+  font-family: "Clash Display";
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  position: absolute;
+  gap: 6px;
+  top: 50%;
+  right: 3%;
+  font-size: 18px;
+}
+
+.homeContainer .serviceButton img {
+  animation: moveArrowRight 3s linear infinite;
+  width: 26px;
+  aspect-ratio: 1/1;
+}
+
+.homeContainer .contentContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  background-color: #000;
+  color: white;
+  border-radius: 0 18px 0 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.homeContainer .contentContainer p {
+  font-family: "Fontspring";
+  width: 240px;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.homeContainer .contentContainer p span {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.homeContainer .contentContainer button {
+  width: fit-content;
+  padding: 10px 24px;
+  border-radius: 36px;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 26px;
+  background-color: #0004ff;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+@keyframes moveArrowRight {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(20%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10%);
+  }
+}
+
+@keyframes logoAnim {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .homeContainer .contentContainer {
+    border-radius: 0 18px 0 0;
+    padding: 20px;
+    gap: 14px;
+  }
+
+  .homeContainer .contentContainer p {
+    width: 180px;
+    font-size: 36px;
+  }
+
+  .homeContainer .contentContainer button {
+    padding: 8px 20px 6px 20px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .homeContainer {
+    border-radius: 14px;
+  }
+
+  .homeContainer .logoContainer {
+    width: 180px;
+    height: 120px;
+  }
+
+  .homeContainer .contentContainer {
+    border-radius: 0 14px 0 0;
+  }
+}
+
+@media (max-width: 426px) {
+  .homeContainer .logoContainer {
+    width: 120px;
+    height: 80px;
+  }
+
+  .homeContainer .contentContainer {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .homeContainer .contentContainer p {
+    width: 140px;
+    font-size: 28px;
+  }
+
+  .homeContainer .contentContainer button {
+    padding: 8px 16px 6px 16px;
+    font-size: 18px;
+  }
+
+  .homeContainer .serviceButton {
+    gap: 6px;
+    font-size: 16px;
+    right: 2%;
+  }
+
+  .homeContainer .serviceButton img {
+    width: 20px;
+  }
+}
+
+@media (max-width: 376px) {
+  .homeContainer {
+    border-radius: 10px;
+  }
+
+  .homeContainer .contentContainer {
+    padding: 14px;
+    border-radius: 0 10px 0 0;
+  }
+
+  .homeContainer .serviceButton {
+    gap: 2px;
+    font-size: 14px;
+    right: 2%;
+  }
+
+  .homeContainer .serviceButton img {
+    width: 18px;
+  }
+}
