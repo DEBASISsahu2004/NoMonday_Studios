@@ -18,11 +18,14 @@ body {
 
 button {
   outline: none;
+  border: none;
+  background: none;
 }
 
 button:focus {
   outline: none;
   box-shadow: none;
+  background: none;
 }
 
 @media (max-width: 768px) {
