@@ -68,6 +68,10 @@
   transform: scale(1.1);
 }
 
+.homeContainer .serviceButton:active {
+  transform: scale(0.9);
+}
+
 .homeContainer .serviceButton img {
   animation: moveArrowRight 3s linear infinite;
   width: 26px;
