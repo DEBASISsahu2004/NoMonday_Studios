@@ -10,7 +10,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   user-select: none;
 }
 
@@ -25,6 +25,7 @@
   transform: translate(-50%, -50%);
   width: 230px;
   height: 170px;
+  transition: all 0.3s ease-in-out;
   background: linear-gradient(
     45deg,
     #ffffff,
@@ -58,7 +59,12 @@
   gap: 6px;
   top: 50%;
   right: 3%;
+  transition: all 0.3s ease-in-out;
   font-size: 18px;
+}
+
+.homeContainer .serviceButton:hover {
+  transform: scale(1.1);
 }
 
 .homeContainer .serviceButton img {
@@ -78,6 +84,7 @@
   padding: 24px;
   display: flex;
   flex-direction: column;
+  transition: all 0.3s ease-in-out;
   gap: 16px;
 }
 
@@ -85,6 +92,7 @@
   font-family: "Fontspring";
   width: 240px;
   font-size: 48px;
+  transition: all 0.3s ease-in-out;
   text-transform: uppercase;
 }
 
@@ -96,13 +104,24 @@
   width: fit-content;
   padding: 10px 24px;
   border-radius: 36px;
+  transition: all 0.3s ease-in-out;
   letter-spacing: 1px;
   border: none;
   font-size: 26px;
   background-color: #0004ff;
   color: white;
   font-family: "Bebas Neue", sans-serif;
+  cursor: pointer;
 }
+
+.homeContainer .contentContainer button:hover{
+  background-color: #00014b;
+}
+
+.homeContainer .contentContainer button:active{
+  background-color: #0004ff;
+}
+
 
 @keyframes moveArrowRight {
   0%,
