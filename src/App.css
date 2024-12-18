@@ -4,32 +4,10 @@
   box-sizing: border-box;
 }
 
-body {
-  width: 100dvw;
-  height: 100dvh;
-  position: relative;
-  padding: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: padding 0.3s ease-in-out;
-  background-color: #000;
-}
-
-button {
-  -webkit-tap-highlight-color: transparent;
-}
-
-@media (max-width: 768px) {
-  body {
-    padding: 16px;
-  }
-}
-
-@media (max-width: 375px) {
-  body {
-    padding: 10px;
-  }
+:root {
+  --bg-color1: #090a23;
+  --primary-blue: 0, 0, 255;
+  --circle-size: 80%;
 }
 
 @font-face {
@@ -42,4 +20,32 @@ button {
   font-family: "Fontspring";
   src: url("./assets/fonts/FONTSPRING-DEMO-Blunt-Con/Fontspring-DEMO-blunt-con.otf")
     format("opentype");
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  position: relative;
+  padding: 24px;
+  transition: padding 0.3s ease-in-out;
+  background-color: #000;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    padding: 10px;
+  }
 }
