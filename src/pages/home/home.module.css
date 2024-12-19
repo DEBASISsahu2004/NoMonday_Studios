@@ -67,10 +67,9 @@
 
 .homeContainer .serviceButton {
   text-transform: uppercase;
+  text-decoration: none;
   font-family: "Clash Display";
-  background-color: transparent;
   cursor: pointer;
-  border: none;
   color: white;
   display: flex;
   align-items: center;
@@ -128,13 +127,13 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
-.homeContainer .contentContainer button {
+.homeContainer .contentContainer .contactButton {
+  text-decoration: none;
   width: fit-content;
   padding: 10px 24px;
   border-radius: 28px;
   transition: all 0.3s ease-in-out;
   letter-spacing: 1px;
-  border: none;
   font-size: 26px;
   background-color: rgb(var(--primary-blue));
   color: white;
