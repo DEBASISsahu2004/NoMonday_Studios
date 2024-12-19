@@ -65,34 +65,39 @@
   animation: logoAnim 5s ease-in-out infinite;
 }
 
-.homeContainer .serviceButton {
-  text-transform: uppercase;
+.homeContainer .serviceLink {
   text-decoration: none;
-  font-family: "Clash Display";
-  cursor: pointer;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  user-select: none;
   position: absolute;
   top: 50%;
   right: 3%;
   transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
+}
+
+.homeContainer .serviceLink button {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Clash Display";
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  user-select: none;
+  background: none;
+  transition: all 0.3s ease-in-out;
   font-size: 15px;
   letter-spacing: 2px;
 }
 
-.homeContainer .serviceButton:hover {
+.homeContainer .serviceLink:hover {
   transform: translateY(-50%) scale(1.1);
 }
 
-.homeContainer .serviceButton:active {
+.homeContainer .serviceLink:active {
   transform: translateY(-50%) scale(0.9);
 }
 
-.homeContainer .serviceButton img {
+.homeContainer .serviceLink button img {
   animation: moveArrowRight 3s linear infinite;
   width: 28px;
   aspect-ratio: 1/1;
@@ -127,7 +132,7 @@
   font-family: "Bebas Neue", sans-serif;
 }
 
-.homeContainer .contentContainer .contactButton {
+.homeContainer .contentContainer .contactLink {
   text-decoration: none;
   width: fit-content;
   padding: 10px 24px;
@@ -141,11 +146,11 @@
   cursor: pointer;
 }
 
-.homeContainer .contentContainer button:hover{
+.homeContainer .contentContainer .contactLink:hover {
   background-color: rgb(0, 0, 182);
 }
 
-.homeContainer .contentContainer button:active{
+.homeContainer .contentContainer .contactLink:active {
   background-color: rgb(var(--primary-blue));
 }
 
@@ -160,7 +165,7 @@
     font-size: 36px;
   }
 
-  .homeContainer .contentContainer button {
+  .homeContainer .contentContainer .contactLink {
     padding: 8px 20px 6px 20px;
     font-size: 20px;
   }
@@ -197,18 +202,22 @@
     font-size: 28px;
   }
 
-  .homeContainer .contentContainer button {
+  .homeContainer .contentContainer .contactLink {
     padding: 8px 16px 6px 16px;
     font-size: 18px;
   }
 
-  .homeContainer .serviceButton {
+  .homeContainer .serviceLink{
+    right: 2%;
+  }
+
+  .homeContainer .serviceLink button {
     font-size: 10px;
     letter-spacing: 1.5px;
     right: 2%;
   }
 
-  .homeContainer .serviceButton img {
+  .homeContainer .serviceLink button img {
     width: 20px;
   }
 }
@@ -224,8 +233,8 @@
   }
 }
 
-@media (max-width: 320px){
-  .homeContainer .serviceButton {
+@media (max-width: 320px) {
+  .homeContainer .serviceLink {
     right: 0;
   }
 }
