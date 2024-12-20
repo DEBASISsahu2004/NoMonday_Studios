@@ -1,3 +1,6 @@
+import AOS from 'aos';
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 import styles from './contact.module.css';
 import RightArrow from '../../assets/svgs/right-arrow.svg';
 import LeftArrow from '../../assets/svgs/left-arrow.svg';
@@ -6,6 +9,11 @@ import Linkedin from '../../assets/svgs/linkedin.svg';
 import Links from '../../components/links/Links';
 
 const Contact = () => {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className={styles.contactContainer}>
       <Links
@@ -19,11 +27,16 @@ const Contact = () => {
       </Links>
 
       <div className={styles.contactSection}>
-        <h1>Contact Us</h1>
+        <div className={styles.aosContainer} data-aos="fade-down" data-aos-duration="1500">
+          <h1>Contact Us</h1>
+        </div>
+
         <Links
           href="mailto:hello@nomondaystudios.com"
           className={`${styles.mailLink}`}
-          type="socialHandleLink">
+          type="socialHandleLink"
+          dataAos="zoom-in" 
+          dataAosDuration="1500">
           <button>
             hello<span>@</span>nomondaystudios.com
           </button>
@@ -33,7 +46,9 @@ const Contact = () => {
           <Links
             href="tel:+490176 8025780"
             className={`${styles.teleLink}`}
-            type="socialHandleLink">
+            type="socialHandleLink"
+            dataAos="fade-up-right" 
+            dataAosDuration="1500">
             <button>
               +49(0)176 8025780
             </button>
@@ -43,7 +58,9 @@ const Contact = () => {
             href="https://www.linkedin.com/company/nomonday-studios/"
             className={`${styles.linkedinLink}`}
             target="_blank"
-            type="socialHandleLink">
+            type="socialHandleLink"
+            dataAos="fade-up" 
+            dataAosDuration="1500">
             <button>
               <img src={Linkedin} alt="linkedin" />
             </button>
@@ -53,7 +70,9 @@ const Contact = () => {
             href="https://www.instagram.com/nomonday.studios?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             className={`${styles.instagramLink}`}
             target="_blank"
-            type="socialHandleLink">
+            type="socialHandleLink"
+            dataAos="fade-up-left" 
+            dataAosDuration="1500">
             <button>
               <img src={Instagram} alt="instagram" />
             </button>
