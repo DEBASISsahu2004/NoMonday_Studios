@@ -40,8 +40,9 @@ const Contact = () => {
           </Links>
 
           <Links
-            href="https://www.linkedin.com/company/nomondaystudios"
+            href="https://www.linkedin.com/company/nomonday-studios/"
             className={`${styles.linkedinLink}`}
+            target="_blank"
             type="socialHandleLink">
             <button>
               <img src={Linkedin} alt="linkedin" />
@@ -49,8 +50,9 @@ const Contact = () => {
           </Links>
 
           <Links
-            href="https://www.instagram.com/nomondaystudios/"
+            href="https://www.instagram.com/nomonday.studios?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             className={`${styles.instagramLink}`}
+            target="_blank"
             type="socialHandleLink">
             <button>
               <img src={Instagram} alt="instagram" />
