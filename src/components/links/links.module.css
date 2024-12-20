@@ -1,0 +1,138 @@
+@keyframes moveArrow {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(10%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-10%);
+  }
+}
+
+.servicePage button,
+.homePage button {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Clash Display";
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  user-select: none;
+  background: none;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.servicePage button img,
+.homePage button img {
+  animation: moveArrow 3s linear infinite;
+  width: 28px;
+  aspect-ratio: 1/1;
+}
+
+.servicePage button:hover, .homePage button:hover {
+  transform: scale(1.1);
+}
+
+.servicePage button:active, .homePage button:active {
+  transform: scale(0.9);
+}
+
+.contactLink {
+  text-decoration: none;
+  width: fit-content;
+  padding: 10px 24px;
+  border-radius: 28px;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+  font-size: 26px;
+  background-color: rgb(var(--primary-blue));
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.contactLink:hover {
+  background-color: rgb(0, 0, 182);
+}
+
+.contactLink:active {
+  background-color: rgb(var(--primary-blue));
+}
+
+.socialHandleLink{
+  width: fit-content;
+  height: fit-content;
+  border: 2px solid white;
+  border-radius: 60px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.socialHandleLink button{
+  background: none;
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  text-wrap: nowrap;
+}
+
+.socialHandleLink button img{
+  width: 36px;
+  transition: all 0.3s ease-in-out;
+}
+
+.socialHandleLink button:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .contactLink {
+    padding: 8px 20px 6px 20px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .socialHandleLink button{
+    font-size: 24px;
+  }
+  
+  .socialHandleLink button img{
+    width: 28px;
+  }
+}
+
+@media (max-width: 426px) {
+  .contactLink {
+    padding: 8px 16px 6px 16px;
+    font-size: 18px;
+  }
+
+  .servicePage button,
+  .homePage button {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    right: 2%;
+  }
+
+  .servicePage button img,
+  .homePage button img {
+    width: 20px;
+  }
+  
+  .socialHandleLink button{
+    font-size: 18px;
+  }
+  
+  .socialHandleLink button img{
+    width: 22px;
+  }
+}

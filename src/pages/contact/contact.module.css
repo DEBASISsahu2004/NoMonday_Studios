@@ -1,0 +1,120 @@
+.contactContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  z-index: 1;
+  transition: border-radius 0.3s ease-in-out;
+}
+
+.contactContainer .servicesLink,
+.contactContainer .homeLink {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.contactContainer .servicesLink {
+  left: 3%;
+}
+
+.contactContainer .homeLink {
+  right: 3%;
+}
+
+.contactContainer .contactSection {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactContainer .contactSection h1 {
+  width: fit-content;
+  font-size: 48px;
+  color: white;
+  font-family: "Fontspring", sans-serif;
+  font-weight: 400;
+  transition: font-size 0.3s ease-in-out;
+}
+
+.contactContainer .contactSection .contactDetails {
+  display: flex;
+  gap: 16px;
+}
+
+.contactContainer .contactSection .mailLink button {
+  font-family: "Fontspring", sans-serif;
+  letter-spacing: 1px;
+}
+
+.contactContainer .contactSection .mailLink button span,
+.contactContainer .contactSection .contactDetails .teleLink button {
+  font-family: "bebas neue", sans-serif;
+}
+
+.contactContainer .contactSection .mailLink button,
+.contactContainer .contactSection .contactDetails .teleLink button {
+  padding: 10px 24px;
+}
+
+.contactContainer .contactSection .contactDetails .linkedinLink button,
+.contactContainer .contactSection .contactDetails .instagramLink button {
+  display: flex;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .contactContainer .contactSection h1 {
+    font-size: 36px;
+  }
+
+  .contactContainer .contactSection .contactDetails {
+    gap: 12px;
+  }
+
+  .contactContainer .contactSection .mailLink button,
+  .contactContainer .contactSection .contactDetails .teleLink button {
+    padding: 8px 20px;
+  }
+}
+
+@media (max-width: 700px) {
+  .contactContainer .servicesLink,
+  .contactContainer .homeLink {
+    top: 96%;
+  }
+}
+
+@media (max-width: 426px) {
+  .contactContainer .contactSection {
+    gap: 10px;
+  }
+
+  .contactContainer .contactSection h1 {
+    font-size: 28px;
+  }
+
+  .contactContainer .contactSection .contactDetails {
+    gap: 6px;
+  }
+
+  .contactContainer .contactSection .mailLink button {
+    letter-spacing: 0.5px;
+  }
+
+  .contactContainer .contactSection .mailLink button,
+  .contactContainer .contactSection .contactDetails .teleLink button {
+    padding: 6px 10px;
+  }
+
+  .contactContainer .contactSection .contactDetails .linkedinLink button,
+  .contactContainer .contactSection .contactDetails .instagramLink button {
+    padding: 7px;
+  }
+}

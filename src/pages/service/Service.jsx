@@ -1,8 +1,8 @@
-
+import styles from './service.module.css'
 
 const Service = () => {
   return (
-    <div>Service</div>
+    <div className={styles.serviceContainer}>Service</div>
   )
 }
 
