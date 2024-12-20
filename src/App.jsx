@@ -6,15 +6,14 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Background from './components/background/Background'
 
 function App() {
-
   return (
     <>
       <Background />
       <Router>
         <Routes>
-          <Route path="/" element={<Contact />} />
+          <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />
-          <Route path="/contact" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </>
