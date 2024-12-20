@@ -12,9 +12,9 @@ function App() {
       <Background />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Contact />} />
           <Route path="/service" element={<Service />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Home />} />
         </Routes>
       </Router>
     </>
