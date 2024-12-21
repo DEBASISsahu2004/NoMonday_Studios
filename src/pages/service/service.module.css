@@ -61,11 +61,15 @@
   padding: 7px 20px 16px 20px;
   border: 2px solid white;
   border-radius: 40px;
-  transition: all 0.3s ease-in-out;
+  transition: padding 0.3s ease-in-out, font-size 0.3s ease-in-out, transform 0.3s ease-in-out;
   cursor: pointer;
 }
 
 .serviceContainer .serviceSection .service:hover {
+  transform: scale(1.1);
+}
+
+.serviceContainer .serviceSection .service.active {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
