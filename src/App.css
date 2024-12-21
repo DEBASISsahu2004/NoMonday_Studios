@@ -41,6 +41,10 @@ button, a {
   text-decoration: none;
 }
 
+.aosContainer{
+  width: fit-content;
+}
+
 @media (max-width: 768px) {
   body {
     padding: 16px;

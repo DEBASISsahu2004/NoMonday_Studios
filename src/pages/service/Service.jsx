@@ -16,13 +16,7 @@ const Service = () => {
   }
 
   const handleClick = (service) => {
-    setActiveService(service);
-    const serviceDescription = document.querySelector(`.${styles.serviceDescription}`);
-    if (serviceDescription) {
-      serviceDescription.style.display = "block";
-      serviceDescription.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
-      serviceDescription.textContent = description[service];
-    }
+    setActiveService(activeService === service ? null : service);
   }
 
   return (
@@ -37,15 +31,25 @@ const Service = () => {
       </Links>
 
       <div className={styles.serviceSection}>
-        <h1>Services</h1>
+        <div className={styles.aosContainer} data-aos="fade-down" data-aos-duration="1500">
+          <h1>Services</h1>
+        </div>
         <div className={styles.serviceList}>
-          <p onClick={() => handleClick('brandDesign')} className={`${styles.service} ${styles.brandDesign} ${activeService === 'brandDesign' ? styles.active : ''}`}>brand design</p>
-          <p onClick={() => handleClick('rebranding')} className={`${styles.service} ${styles.rebranding} ${activeService === 'rebranding' ? styles.active : ''}`}>rebranding</p>
+          <div className={styles.aosContainer} data-aos="fade-right" data-aos-duration="1500">
+            <p onClick={() => handleClick('brandDesign')} className={`${styles.service} ${styles.brandDesign} ${activeService === 'brandDesign' ? styles.active : ''}`}>brand design</p>
+          </div>
+          <div className={styles.aosContainer} data-aos="fade-left" data-aos-duration="1500">
+            <p onClick={() => handleClick('rebranding')} className={`${styles.service} ${styles.rebranding} ${activeService === 'rebranding' ? styles.active : ''}`}>rebranding</p>
+          </div>
         </div>
 
-        <p className={styles.serviceDescription}></p>
+        {activeService && (
+          <p className={styles.serviceDescription}>{description[activeService]}</p>
+        )}
 
-        <p onClick={() => handleClick('influencerRelations')} className={`${styles.service} ${styles.influencerRelations} ${activeService === 'influencerRelations' ? styles.active : ''}`}>influencer relations</p>
+        <div className={styles.aosContainer} data-aos="fade-up" data-aos-duration="1500">
+          <p onClick={() => handleClick('influencerRelations')} className={`${styles.service} ${styles.influencerRelations} ${activeService === 'influencerRelations' ? styles.active : ''}`}>influencer relations</p>
+        </div>
       </div>
 
       <Links

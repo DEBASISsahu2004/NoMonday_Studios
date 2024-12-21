@@ -19,7 +19,7 @@ const Home = () => {
         </button>
       </Links>
 
-      <div className={styles.contentContainer}>
+      <div className={styles.contentContainer} data-aos="fade-up-right" data-aos-duration="1500">
         <p className={styles.title}>Your brand deserves more, time for a revolution <span>!</span></p>
         <Links
           href="/contact"
