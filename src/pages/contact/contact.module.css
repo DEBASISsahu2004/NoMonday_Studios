@@ -74,6 +74,10 @@
 }
 
 @media (max-width: 768px) {
+  .contactContainer {
+    border-radius: 14px;
+  }
+
   .contactContainer .contactSection h1 {
     font-size: 36px;
   }
@@ -120,5 +124,11 @@
   .contactContainer .contactSection .contactDetails .linkedinLink button,
   .contactContainer .contactSection .contactDetails .instagramLink button {
     padding: 7px;
+  }
+}
+
+@media (max-width: 376px) {
+  .contactContainer {
+    border-radius: 10px;
   }
 }
