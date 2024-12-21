@@ -12,8 +12,8 @@ const Home = () => {
 
       <Links
         href="/service"
-        className={`${styles.servicesLink}`} 
-        type="servicePage">
+        className={`${styles.servicesLink}`}
+        type="sitePage">
         <button>
           Services<img src={RightArrow} alt="right arrow" />
         </button>

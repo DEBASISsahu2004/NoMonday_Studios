@@ -1,6 +1,3 @@
-import AOS from 'aos';
-import "aos/dist/aos.css";
-import { useEffect } from 'react';
 import styles from './contact.module.css';
 import RightArrow from '../../assets/svgs/right-arrow.svg';
 import LeftArrow from '../../assets/svgs/left-arrow.svg';
@@ -9,17 +6,13 @@ import Linkedin from '../../assets/svgs/linkedin.svg';
 import Links from '../../components/links/Links';
 
 const Contact = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
 
   return (
     <div className={styles.contactContainer}>
       <Links
         href="/service"
         className={`${styles.servicesLink}`}
-        type="servicePage">
+        type="sitePage">
         <button>
           <img src={LeftArrow} alt="left arrow" />
           Services
@@ -35,7 +28,7 @@ const Contact = () => {
           href="mailto:hello@nomondaystudios.com"
           className={`${styles.mailLink}`}
           type="socialHandleLink"
-          dataAos="zoom-in" 
+          dataAos="zoom-in"
           dataAosDuration="1500">
           <button>
             hello<span>@</span>nomondaystudios.com
@@ -47,7 +40,7 @@ const Contact = () => {
             href="tel:+490176 8025780"
             className={`${styles.teleLink}`}
             type="socialHandleLink"
-            dataAos="fade-up-right" 
+            dataAos="fade-up-right"
             dataAosDuration="1500">
             <button>
               +49(0)176 8025780
@@ -59,7 +52,7 @@ const Contact = () => {
             className={`${styles.linkedinLink}`}
             target="_blank"
             type="socialHandleLink"
-            dataAos="fade-up" 
+            dataAos="fade-up"
             dataAosDuration="1500">
             <button>
               <img src={Linkedin} alt="linkedin" />
@@ -71,7 +64,7 @@ const Contact = () => {
             className={`${styles.instagramLink}`}
             target="_blank"
             type="socialHandleLink"
-            dataAos="fade-up-left" 
+            dataAos="fade-up-left"
             dataAosDuration="1500">
             <button>
               <img src={Instagram} alt="instagram" />
@@ -84,7 +77,7 @@ const Contact = () => {
       <Links
         href="/"
         className={`${styles.homeLink}`}
-        type="homePage">
+        type="sitePage">
         <button>
           Home<img src={RightArrow} alt="right arrow" />
         </button>

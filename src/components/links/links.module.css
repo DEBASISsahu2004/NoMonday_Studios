@@ -14,8 +14,7 @@
   }
 }
 
-.servicePage button,
-.homePage button {
+.sitePage button {
   text-transform: uppercase;
   color: white;
   font-family: "Clash Display";
@@ -29,18 +28,17 @@
   letter-spacing: 2px;
 }
 
-.servicePage button img,
-.homePage button img {
+.sitePage button img {
   animation: moveArrow 3s linear infinite;
   width: 28px;
   aspect-ratio: 1/1;
 }
 
-.servicePage button:hover, .homePage button:hover {
+.sitePage button:hover {
   transform: scale(1.1);
 }
 
-.servicePage button:active, .homePage button:active {
+.sitePage button:active {
   transform: scale(0.9);
 }
 
@@ -65,7 +63,7 @@
   background-color: rgb(var(--primary-blue));
 }
 
-.socialHandleLink{
+.socialHandleLink {
   width: fit-content;
   height: fit-content;
   border: 2px solid white;
@@ -74,7 +72,7 @@
   transition: all 0.3s ease-in-out;
 }
 
-.socialHandleLink button{
+.socialHandleLink button {
   background: none;
   width: 100%;
   height: 100%;
@@ -85,12 +83,12 @@
   text-wrap: nowrap;
 }
 
-.socialHandleLink button img{
+.socialHandleLink button img {
   width: 36px;
   transition: all 0.3s ease-in-out;
 }
 
-.socialHandleLink button:hover{
+.socialHandleLink button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -102,12 +100,11 @@
 }
 
 @media (max-width: 768px) {
-  
-  .socialHandleLink button{
+  .socialHandleLink button {
     font-size: 24px;
   }
-  
-  .socialHandleLink button img{
+
+  .socialHandleLink button img {
     width: 28px;
   }
 }
@@ -118,23 +115,21 @@
     font-size: 18px;
   }
 
-  .servicePage button,
-  .homePage button {
+  .sitePage button {
     font-size: 12px;
     letter-spacing: 1.5px;
     right: 2%;
   }
 
-  .servicePage button img,
-  .homePage button img {
+  .sitePage button img {
     width: 20px;
   }
-  
-  .socialHandleLink button{
+
+  .socialHandleLink button {
     font-size: 18px;
   }
-  
-  .socialHandleLink button img{
+
+  .socialHandleLink button img {
     width: 22px;
   }
 }
