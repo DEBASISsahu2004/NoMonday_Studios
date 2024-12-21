@@ -33,7 +33,7 @@ body {
   background-color: #000;
 }
 
-button, a {
+button, a, p {
   -webkit-tap-highlight-color: transparent;
   outline: none;
   border: none;
