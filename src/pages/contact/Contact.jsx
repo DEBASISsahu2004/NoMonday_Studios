@@ -37,13 +37,13 @@ const Contact = () => {
 
         <div className={styles.contactDetails}>
           <Links
-            href="tel:+490176 8025780"
+            href="tel:+49 176 80257580"
             className={`${styles.teleLink}`}
             type="socialHandleLink"
             dataAos="fade-up-right"
             dataAosDuration="1500">
             <button>
-              +49(0)176 8025780
+              +49 176 80257580
             </button>
           </Links>
 
